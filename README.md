@@ -76,8 +76,8 @@ Plugin file: `~/Library/Application Support/SwiftBar/Plugins/context-monitor.30s
   ```bash
   mv ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.{30s,10s}.sh
   ```
-- **Warning threshold** — edit the plugin file, change `WARN_THRESHOLD = 100000` to your preferred token count
-- **SSH target** — edit `MINI="user@host"` in the plugin file, or set an env var:
+- **Warning threshold** — edit the above plugin file, change `WARN_THRESHOLD = 100000` to your preferred token count
+- **SSH target** — edit `MINI="user@host"` in the above plugin file, or set an env var:
   ```bash
   export OPENCLAW_SSH_TARGET="user@new-host"
   ```
@@ -154,8 +154,8 @@ bash scripts/install.sh --remote user@host
   ```bash
   mv ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.{30s,10s}.sh
   ```
-- **警告阈值** — 编辑插件文件，找到 `WARN_THRESHOLD = 100000`，改为你想要的 token 数
-- **SSH 目标** — 如果远程主机地址变了，编辑插件文件中的 `MINI="user@host"`，或设置环境变量：
+- **警告阈值** — 编辑上述插件文件，找到 `WARN_THRESHOLD = 100000`，改为你想要的 token 数
+- **SSH 目标** — 如果远程主机地址变了，编辑上述插件文件中的 `MINI="user@host"`，或设置环境变量：
   ```bash
   export OPENCLAW_SSH_TARGET="user@new-host"
   ```
