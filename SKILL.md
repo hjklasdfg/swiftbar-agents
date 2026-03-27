@@ -1,6 +1,6 @@
 ---
 name: context-monitor
-description: 「macOS」常驻菜单栏的上下文显示器 · Menu bar context monitor for OpenClaw agents. Shows context usage, model, running state via SwiftBar. Auto-detects local vs remote OpenClaw setup. Triggers on "menu bar", "SwiftBar", "agent status", "agent monitor", "observability", "dashboard mac", "agent context", "context monitor".
+description: 「macOS」常驻菜单栏的上下文显示器 · Menu bar context monitor for OpenClaw agents. Shows context usage, model, and running state via SwiftBar. Auto-detects local vs remote OpenClaw setup.
 ---
 
 # Context Monitor
@@ -113,3 +113,7 @@ Shows model aliases (opus, sonnet, haiku, flash, pro). Falls back to model name 
 - `🦞 ❌` — SSH or local read failed. Check connection.
 - `🦞 ⚠️` — Data parse error. Run `python3 ~/.openclaw/openclaw-status.py` on host.
 - Agent missing — No `sessions.json` yet (agent never used).
+
+## Triggers
+
+menu bar, SwiftBar, agent status, agent monitor, observability, dashboard mac, agent context, context monitor, 菜单栏, 上下文显示, agent 监控
