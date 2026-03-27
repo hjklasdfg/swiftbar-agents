@@ -23,10 +23,17 @@ bash scripts/install.sh
 
 Agent CANNOT install SwiftBar on the user's Mac remotely. Follow this flow:
 
+**Step 0: Verify prerequisites.** Remote mode requires:
+- The user's Mac and OpenClaw host must be network-reachable (same LAN, or connected via Tailscale/ZeroTier/WireGuard)
+- SSH key auth configured (passwordless, `BatchMode=yes`)
+- Python 3 on the OpenClaw host
+
+If the user is unsure about network connectivity, suggest Tailscale as the simplest option.
+
 **Step 1: Ask the user:**
 
 > "Does OpenClaw run on this Mac, or on a remote machine?
-> If remote, what's the SSH address? (e.g. `user@hostname`)"
+> If remote, what's the SSH address? (e.g. `user@hostname` — the two machines need to be network-reachable, e.g. same LAN or via Tailscale)"
 
 **Step 2: Agent deploys the status collector** to the OpenClaw host (agent can do this directly):
 

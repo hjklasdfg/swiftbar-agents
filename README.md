@@ -27,7 +27,15 @@ bash scripts/install.sh
 bash scripts/install.sh --remote user@host
 ```
 
-Requires SSH key auth to the remote host.
+#### Prerequisites for remote mode
+
+- **Network**: Your Mac and the OpenClaw host must be reachable over the network. If they're not on the same LAN, use a mesh VPN like [Tailscale](https://tailscale.com), [ZeroTier](https://zerotier.com), or [WireGuard](https://wireguard.com) to connect them.
+- **SSH key auth**: Passwordless SSH must be configured (`BatchMode=yes`). If not set up yet:
+  ```bash
+  ssh-keygen -t ed25519 -N ""
+  ssh-copy-id user@host
+  ```
+- **Python 3**: Must be available on the OpenClaw host.
 
 ### Via OpenClaw skill
 
