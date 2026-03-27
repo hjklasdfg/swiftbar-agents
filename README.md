@@ -1,6 +1,6 @@
 # 🦞 Context Monitor
 
-Real-time OpenClaw agent observability in the macOS menu bar.
+Monitor OpenClaw agent context length from the macOS menu bar — no more worrying about context overflow draining your model quota.
 
 ![macOS](https://img.shields.io/badge/macOS-only-blue) ![SwiftBar](https://img.shields.io/badge/SwiftBar-v2.0+-green)
 
@@ -8,12 +8,12 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 
 ## Features
 
-- **At-a-glance context usage** — see which agent is active and how much context it's consuming, right from the menu bar
-- **Multi-agent overview** — dropdown shows all agents with token counts, model info, and status
-- **Status indicators** — `▶` running · `—` idle · `✖` failed · `🫠` context over 100k
-- **Agent identity** — displays each agent's custom emoji from `IDENTITY.md`
-- **Model aliases** — shows short names (opus, sonnet, haiku, flash, pro) instead of full model IDs
-- **Local & remote** — works whether OpenClaw runs on your Mac or a remote server
+- **At-a-glance context usage** — menu bar shows the active agent (emoji if set, otherwise agent ID) and its context length, e.g. `🔧 140k`
+- **Multi-agent overview** — dropdown lists all agents with context length, model, and status
+- **Status indicators** — `▶` running / `—` idle / `✖` failed. Shows `🫠` when context exceeds 100k
+- **Agent display** — reads each agent's custom emoji from `IDENTITY.md`
+- **Simplified model names** — shows short aliases (opus, sonnet, haiku, flash, pro) instead of full model IDs
+- **Local + remote** — works whether OpenClaw runs on your Mac or a remote server
 
 ## Install
 
@@ -94,14 +94,16 @@ Plugin file: `~/Library/Application Support/SwiftBar/Plugins/context-monitor.30s
 
 ## 中文说明
 
-### 主要功能
+在菜单栏就可以查看当前 Agent 上下文长度，不用再担心上下文过长导致模型配额耗尽。
 
-- **一眼掌握上下文用量** — 菜单栏直接显示当前活跃 agent 的 emoji 和上下文长度（如 `🔧 140k`）
-- **多 Agent 总览** — 下拉菜单展示所有 agent 的 token 用量、模型、运行状态
-- **状态标识** — `▶` 运行中 · `—` 空闲 · `✖` 失败 · `🫠` 上下文超过 100k
-- **Agent 个性化** — 从 `IDENTITY.md` 读取每个 agent 的自定义 emoji
-- **模型别名** — 显示简称（opus、sonnet、haiku、flash、pro）而非完整模型 ID
-- **本地 & 远程** — 支持 OpenClaw 在本机或远程服务器上运行
+### 功能一览
+
+- **一眼掌握上下文用量** — 菜单栏显示当前活跃 agent（优先显示 emoji，如无设置会显示 Agent ID），以及对应 Agent 的上下文长度。效果：`🔧 140k`
+- **多 Agent 总览** — 下拉菜单展示所有 agent 的上下文长度、模型、运行状态
+- **状态标识** — `▶` 运行中 / `—` 空闲 / `✖` 失败。上下文超过 100k 时会显示标志 `🫠`
+- **Agent 显示** — 从 `IDENTITY.md` 读取每个 agent 的自定义 emoji
+- **Agent 模型显示简化** — 显示简称（opus、sonnet、haiku、flash、pro）而非完整模型 ID
+- **本地 + 远程** — 支持 OpenClaw 在本机或远程服务器上运行
 
 ### 安装
 
