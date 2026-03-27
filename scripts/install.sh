@@ -15,7 +15,7 @@ ask()   { echo -en "${YELLOW}?${NC} $1"; }
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/.." 2>/dev/null && pwd || echo "$SCRIPT_DIR")"
 PLUGIN_DIR="$HOME/Library/Application Support/SwiftBar/Plugins"
-PLUGIN_NAME="openclaw-agents.30s.sh"
+PLUGIN_NAME="context-monitor.30s.sh"
 SSH_TARGET=""
 FORCE_MODE=""
 
@@ -29,7 +29,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 echo ""
-echo "🦞 SwiftBar Agent Monitor — Installer"
+echo "🦞 Context Monitor — Installer"
 echo "======================================="
 echo ""
 

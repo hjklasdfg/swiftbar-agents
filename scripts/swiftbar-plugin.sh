@@ -1,8 +1,8 @@
 #!/bin/bash
-# <bitbar.title>OpenClaw Agent Status</bitbar.title>
+# <bitbar.title>Context Monitor</bitbar.title>
 # <bitbar.version>v1.1</bitbar.version>
 # <bitbar.author>OpenClaw Community</bitbar.author>
-# <bitbar.desc>OpenClaw agent observability in macOS menu bar</bitbar.desc>
+# <bitbar.desc>Real-time OpenClaw agent context monitoring in macOS menu bar</bitbar.desc>
 # <swiftbar.hideAbout>true</swiftbar.hideAbout>
 # <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
 # <swiftbar.hideDisablePlugin>true</swiftbar.hideDisablePlugin>

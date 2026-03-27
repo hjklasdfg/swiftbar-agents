@@ -1,9 +1,9 @@
 ---
-name: swiftbar-agents
-description: macOS menu bar agent observability via SwiftBar. Shows OpenClaw agent context usage, model, running state, and health in the menu bar. Includes one-command installer that auto-detects local vs remote OpenClaw setup. Use when setting up agent monitoring on macOS, installing SwiftBar status plugin, or when asked about agent dashboard/observability/monitoring on Mac. Triggers on "menu bar", "SwiftBar", "agent status", "agent monitor", "observability", "dashboard mac", "agent context".
+name: context-monitor
+description: macOS menu bar agent observability via SwiftBar. Shows OpenClaw agent context usage, model, running state, and health in the menu bar. Includes one-command installer that auto-detects local vs remote OpenClaw setup. Use when setting up agent monitoring on macOS, installing SwiftBar status plugin, or when asked about agent dashboard/observability/monitoring on Mac. Triggers on "menu bar", "SwiftBar", "agent status", "agent monitor", "observability", "dashboard mac", "agent context", "context monitor".
 ---
 
-# SwiftBar Agent Monitor
+# Context Monitor
 
 Real-time OpenClaw agent observability in the macOS menu bar.
 
@@ -15,10 +15,10 @@ After skill installation, run the installer directly:
 
 ```bash
 # Local mode
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh
 
 # Remote mode
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host
 ```
 
 If the user asks to set up monitoring and prefers a deterministic approach, guide them to run the install script above instead of the natural language flow below.
@@ -67,10 +67,10 @@ brew install --cask swiftbar
 mkdir -p ~/Library/Application\ Support/SwiftBar/Plugins
 
 # 3. Save this plugin file (agent generates with correct SSH target)
-cat > ~/Library/Application\ Support/SwiftBar/Plugins/openclaw-agents.30s.sh << 'EOF'
+cat > ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.30s.sh << 'EOF'
 (agent inserts swiftbar-plugin.sh content with MINI= set to user's SSH target)
 EOF
-chmod +x ~/Library/Application\ Support/SwiftBar/Plugins/openclaw-agents.30s.sh
+chmod +x ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.30s.sh
 
 # 4. Open SwiftBar
 open /Applications/SwiftBar.app

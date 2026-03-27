@@ -1,4 +1,4 @@
-# 🦞 SwiftBar Agent Monitor
+# 🦞 Context Monitor
 
 Real-time OpenClaw agent observability in the macOS menu bar.
 
@@ -20,14 +20,14 @@ Real-time OpenClaw agent observability in the macOS menu bar.
 ### Option A: Via OpenClaw skill (recommended)
 
 ```bash
-openclaw skills install swiftbar-agents
+openclaw skills install context-monitor
 ```
 
 Then run the installer:
 
 ```bash
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh           # local
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host  # remote
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh           # local
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host  # remote
 ```
 
 Or ask your agent to help set it up, e.g. *"set up menu bar monitoring"*.
@@ -68,11 +68,11 @@ Two components:
 
 ## Customization
 
-Plugin file: `~/Library/Application Support/SwiftBar/Plugins/openclaw-agents.30s.sh`
+Plugin file: `~/Library/Application Support/SwiftBar/Plugins/context-monitor.30s.sh`
 
 - **Refresh interval** — rename the file suffix, e.g. `30s` → `10s`, `1m`, `5m`:
   ```bash
-  mv ~/Library/Application\ Support/SwiftBar/Plugins/openclaw-agents.{30s,10s}.sh
+  mv ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.{30s,10s}.sh
   ```
 - **Warning threshold** — edit the plugin file, change `WARN_THRESHOLD = 100000` to your preferred token count
 - **SSH target** — edit `MINI="user@host"` in the plugin file, or set an env var:
@@ -106,14 +106,14 @@ Plugin file: `~/Library/Application Support/SwiftBar/Plugins/openclaw-agents.30s
 #### 方式一：通过 OpenClaw skill 安装（推荐）
 
 ```bash
-openclaw skills install swiftbar-agents
+openclaw skills install context-monitor
 ```
 
 然后运行安装脚本：
 
 ```bash
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh           # 本地模式
-bash ~/.openclaw/skills/swiftbar-agents/scripts/install.sh --remote user@host  # 远程模式
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh           # 本地模式
+bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host  # 远程模式
 ```
 
 也可以直接让 agent 帮你设置，比如说"帮我设置菜单栏监控"，或者其他类似的表述。
@@ -144,11 +144,11 @@ bash scripts/install.sh --remote user@host
 
 ### 自定义
 
-插件文件位于 `~/Library/Application Support/SwiftBar/Plugins/openclaw-agents.30s.sh`
+插件文件位于 `~/Library/Application Support/SwiftBar/Plugins/context-monitor.30s.sh`
 
 - **刷新间隔** — 重命名文件后缀即可，例如把 `30s` 改为 `10s`、`1m` 或 `5m`：
   ```bash
-  mv ~/Library/Application\ Support/SwiftBar/Plugins/openclaw-agents.{30s,10s}.sh
+  mv ~/Library/Application\ Support/SwiftBar/Plugins/context-monitor.{30s,10s}.sh
   ```
 - **警告阈值** — 编辑插件文件，找到 `WARN_THRESHOLD = 100000`，改为你想要的 token 数
 - **SSH 目标** — 如果远程主机地址变了，编辑插件文件中的 `MINI="user@host"`，或设置环境变量：
