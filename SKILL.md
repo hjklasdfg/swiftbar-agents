@@ -41,12 +41,17 @@ Refresh
 
 ## Install
 
-### Option 1: CLI (recommended)
+### Step 1: Install the skill
 
 ```bash
-# Install the skill
 openclaw skills install menubar-context-monitor
+```
 
+### Step 2: Setup (choose one)
+
+**Option A: CLI (recommended)**
+
+```bash
 # Local — OpenClaw runs on this Mac
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh
 
@@ -54,13 +59,13 @@ bash ~/.openclaw/skills/context-monitor/scripts/install.sh
 bash ~/.openclaw/skills/context-monitor/scripts/install.sh --remote user@host
 ```
 
-### Option 2: Ask your agent
+**Option B: Ask your agent**
 
 > "Help me set up agent menu bar monitoring"
 
-The agent will walk you through it.
+The agent will read this skill and walk you through it.
 
-### Option 3: From source
+**Option C: From source (skip Step 1)**
 
 ```bash
 git clone https://github.com/hjklasdfg/context-monitor.git
